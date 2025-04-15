@@ -1,6 +1,6 @@
 # Text-to-SQL Generator Project Architecture
 
-Here's the project architecture for your text-to-SQL generator:
+Here's the project architecture for our text-to-SQL generator:
 
 ## 1. Project Structure
 ```
