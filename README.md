@@ -34,7 +34,7 @@ text_to_sql_generator/
 │   ├── model_training.ipynb
 │   └── results_analysis.ipynb
 ├── app/
-│   ├── app.py               # Gradio/Streamlit web interface
+│   ├── app.py               # Gradio web interface
 │   └── assets/              # Web app assets
 ├── scripts/
 │   ├── download_data.sh     # Script to download Spider dataset
