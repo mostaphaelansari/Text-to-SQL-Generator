@@ -1,7 +1,7 @@
 # Text-to-SQL Generator Project Architecture
 
 Here's the project architecture for our text-to-SQL generator:
-
+Here is the dataset : https://huggingface.co/datasets/xlangai/DS-1000
 ## 1. Project Structure
 ```
 text_to_sql_generator/
