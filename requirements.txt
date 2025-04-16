@@ -1,0 +1,39 @@
+# Core ML dependencies
+torch
+transformers
+datasets
+evaluate
+
+# SQL parsing and validation
+sqlglot
+sqlparse
+
+# Data processing
+pandas
+numpy
+scikit-learn
+
+# Database connectivity
+sqlalchemy
+sqlite3
+
+# Utilities
+tqdm
+pyyaml
+matplotlib
+seaborn
+jupyter
+
+# Web application
+gradio
+streamlit
+
+# Development tools
+pytest
+black
+isort
+flake8
+
+# Optional - for larger models
+accelerate
+bitsandbytes
