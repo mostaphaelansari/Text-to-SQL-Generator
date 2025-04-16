@@ -15,7 +15,7 @@ scikit-learn
 
 # Database connectivity
 sqlalchemy
-sqlite3
+SQLite3-0611
 
 # Utilities
 tqdm
