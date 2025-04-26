@@ -11,26 +11,27 @@ with gr.Blocks(theme="soft") as chat_blocks:
     
     chatbot = gr.Chatbot(label="Conversation")
     msg = gr.Textbox(label="Your question", placeholder="Enter your question here...")
-    
+
     def user_input(message, history):
         # Add user message to history
         history.append((message, ""))
         return "", history
-    
+
     def bot_response(history):
         # Get last user message
         user_message = history[-1][0]
         
+        if len(user_message.strip()) == 0:
+            history[-1] = ("", "Query is empty.")
+            return history
+        
         # Generate SQL query
         sql_query = model.predict(user_message)
         
-        # Update history with bot 
-        if len(user_message) == 0 :
-            yield "query is empety "
-        else :
-            history[-1] = (user_message, sql_query)
-            return history
-    
+        # Update history with bot response
+        history[-1] = (user_message, sql_query)
+        return history
+
     msg.submit(
         user_input, 
         [msg, chatbot], 
@@ -41,14 +42,18 @@ with gr.Blocks(theme="soft") as chat_blocks:
         chatbot,
         chatbot
     )
-    
+
     # Add example questions
     examples = gr.Examples(
-        examples=["Show me all customers from New York", 
-                 "What are the total sales for each product?", 
-                 "List employees hired after 2020"],
+        examples=[
+            "Show me all customers from New York", 
+            "What are the total sales for each product?", 
+            "List employees hired after 2020"
+        ],
         inputs=msg
     )
+
+    clear_btn = gr.ClearButton(components=[chatbot, msg])
 
 if __name__ == "__main__":
     chat_blocks.launch()
