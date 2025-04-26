@@ -15,7 +15,6 @@ scikit-learn
 
 # Database connectivity
 sqlalchemy
-SQLite3-0611
 
 # Utilities
 tqdm
@@ -33,6 +32,7 @@ pytest
 black
 isort
 flake8
+mypy==1.15.0
 
 # Optional - for larger models
 accelerate
