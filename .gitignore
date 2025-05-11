@@ -1,1 +1,42 @@
 .config
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# Hugging Face Transformers
+*.log
+logs/
+*.json
+*.lock
+*.DS_Store
+
+# Model outputs
+t5-sql-finetuned/
+text_to_sql_generator/notebooks/t5-sql-finetuned/checkpoint-*/
+**/checkpoint-*/
+
+t5-sql-overfit/
+*.pt
+*.bin
+*.onnx
+
+# Trainer checkpoints
+checkpoint-*/
+*.ckpt
+
+# Hugging Face cache
+~/.cache/huggingface/
+.cache/
+datasets/
+cache/
+
+# VSCode / Jupyter artifacts
+.vscode/
+*.ipynb_checkpoints/
+.env
+*.env
+
+# OS
+Thumbs.db
+.DS_Store
